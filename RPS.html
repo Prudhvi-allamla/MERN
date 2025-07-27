@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <style>
+        body{
+            
+        }
+        h1{
+            text-align: center;
+            color: rgb(255, 255, 255);
+            -webkit-text-stroke: 10px solid white;
+            font-family:;
+
+        }
+       img{
+        border: 1px solid black;
+        border-radius: 5px;
+        margin-left: 200px;
+        margin-top: 50px;
+        
+        
+       }
+    </style>
+</head>
+
+<body background="public/RPS-bg.jpg">
+    <h1>ROCK PAPER SCISSORS GAME</h1>
+    <img src="public/rock1.png" style="width: 200px; height: 200px; " onclick="
+    pickcomputermove();
+    if(computermove=='rock'){
+        result='tie';
+    }else if(computermove=='paper'){
+        result='lost'
+    }else if(computermove=='sissors'){
+        result='win'
+    }
+    alert(`your move is rock ,computer move is ${computermove}.final result=  ${result}`)">
+
+    <!-- ================================================================================================= -->
+    <img src="public/paper1.png" style="width: 200px; height: 200px;" onclick="
+    pickcomputermove();
+    if(computermove=='rock'){
+        result='win';
+    }else if(computermove=='paper'){
+        result='tie'
+    }else if(computermove=='sissors'){
+        result='lost'
+    }
+    alert(`your move is paper ,computer move is ${computermove}.final result= ${result}`)">
+<!-- ============================================================================================================== -->
+
+    <img src="public/scissors1.png" style="width: 200px; height: 200px;" onclick="
+     pickcomputermove();
+    if(computermove=='rock'){
+        result='lost';
+    }else if(computermove=='paper'){
+        result='win'
+    }else if(computermove=='sissors'){
+        result='tie'
+    }
+    alert(`your move is sissors ,computer move is ${computermove}.final result=${result}`)">
+
+
+    <script>
+        computermove = '';
+        
+        function pickcomputermove() {
+              randomnumber=Math.random();
+               result = '';
+
+
+            if (randomnumber >= 0 && randomnumber < 1 / 3) {
+                computermove = 'rock';
+            }
+            if (randomnumber >= 1 / 3 && randomnumber < 2 / 3) {
+                computermove = 'paper';
+
+            }
+            if (randomnumber >= 2 / 3 && randomnumber < 1) {
+                computermove = 'sissors';
+
+            }
+
+        }
+        
+
+    </script>
+</body>
+
+</html>
